@@ -1,6 +1,7 @@
 ---
 title: 每日Emo小短句
 date: 2020-4-10 00:04:13
+math: true
 tags:
 ---
 

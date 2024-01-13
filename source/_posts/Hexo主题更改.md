@@ -1,7 +1,7 @@
 ---
 title: Hexo 主题变更
 tags: [Hexo,主题变更]
-math: enable
+math: true
 index_img: /imgs/Hexo主题变更/Shiki&Tsukihime.png
 banner_img: /imgs/Hexo主题变更/Shiki&Tsukihime.png
 data: 2024-01-13
@@ -35,7 +35,7 @@ nalama！答案只有一个了，我将向你—— Fluid 效忠！图源自Pix�
 
 将 Hexo 博客主题从 yilia 切换到 Fluid 的步骤如下：
 
-1. 首先，您需要在本地安装 Fluid 主题。
+1. 首先，您需要在本地安装 Fluid 主题。  
    可以使用以下命令从 GitHub 上下载 Fluid 主题并将其保存到您的 Hexo 博客的 themes 文件夹中：
 
    ```
@@ -1181,12 +1181,17 @@ static_prefix:
 
 现在对我而言还有两个问题，我换到 Fluid 就是为了 Latex
 所以……
-
-这里还是按官方来，不过有一点点的啸变动[^4]
+这里还是按官方来，[^4]
 
 **1.设置主题配置**
 
-$我这里使用的是\;mathjax,\; \\好处是别人可以复制你写的\;Latex，\\坏处是他的换行不能像 typora的'\backslash\backslash'直接换行$
+$我这里使用的是\;mathjax+pandoc,\;$  
+$好处是别人可以复制你写的\;Latex$  
+$\begin{aligned}坏处是\hspace{350px}\\
+他的换行不能像 typora的'\backslash\backslash'直接换行\hspace{128px}\\
+而且不能使用\backslash hfill只能使用\backslash hspace\{num\; cm/px\}\hspace{17px}
+\end{aligned}$  
+而且换行前必须打两个空格
 
 
 ```yaml
@@ -1204,10 +1209,10 @@ post:
 ## 待解决问题
 
 换行异常：
-typora 可以换行，但是 web blog 不能换行只能换段
+typora 可以换行，但是 web blog 不能换行只能换段  
 latex 公式不能换行
 
-段落间隔大
+标题段落间隔大
 
 ## 参考
 
