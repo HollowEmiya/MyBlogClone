@@ -8,28 +8,28 @@ data: 2024-01-13
 typora-root-url: ../
 ---
 
-更换了Hexo 主题，之前 yilia 主题作者是不是开摆了……我看很久没更新.
-nalama！答案只有一个了，我将向你—— Fluid 效忠！图源自Pix画师ID:67549695<!--more-->
+更换了Hexo 主题，之前 yilia 主题作者是不是开摆了……我看很久没更新.  
+nalama！答案只有一个了，我将向你—— Fluid 效忠！图源自Pix画师ID:67549695  
+<!--more-->
 
 # Hexo 主题切换
 
-这里以 yilia 切换到 Fluid 为例，我这里只是分享一下自己是怎么做的，遇到什么问题，
+这里以 yilia 切换到 Fluid 为例，我这里只是分享一下自己是怎么做的，遇到什么问题，  
 肯定有不对的地方，欢迎大家教我。
 
 ## 准备工作
 
-鉴于前面我自己把 blog 干崩过，所有我强烈建议所有人都在 github 存一个仓库备份本地的 Blog
+鉴于前面我自己把 blog 干崩过，所有我强烈建议所有人都在 github 存一个仓库备份本地的 Blog  
 因为 Hexo 这种静态blog **本地磁盘的源文件**和**生成的网页**，是两个部分。
 
-你能不能说人话什么本地，网页的！
+你能不能说人话什么本地，网页的！  
 好好好，你先别急，我知道你很急，但是你先别急。
 
-* 本地的源文件：
-  ![](/imgs/Hexo主题变更/deskt.png)
-* 生成的网页：
+* 本地的源文件：  
+  ![](/imgs/Hexo主题变更/deskt.png)  
+* 生成的网页：  
   ![](/imgs/Hexo主题变更/web.png)
-
-我们可以将本地文件存储到 github 备份，也方便 fallback 和 迁移。
+  我们可以将本地文件存储到 github 备份，也方便 fallback 和 迁移。
 
 ## 切换
 
@@ -37,41 +37,41 @@ nalama！答案只有一个了，我将向你—— Fluid 效忠！图源自Pix�
 
 1. 首先，您需要在本地安装 Fluid 主题。  
    可以使用以下命令从 GitHub 上下载 Fluid 主题并将其保存到您的 Hexo 博客的 themes 文件夹中：
-
+  
+   ```  
+   git clone https://github.com/fluid-dev/hexo-theme-fluid.git themes/fluid  
    ```
-   git clone https://github.com/fluid-dev/hexo-theme-fluid.git themes/fluid
-   ```
-
-2. 下载完成后，进入 Hexo 博客的根目录，并打开 _config.yml 文件。
+  
+2. 下载完成后，进入 Hexo 博客的根目录，并打开 _config.yml 文件。  
    将 theme 字段的值更改为 "fluid"，如下所示：
    
-   ```
-   theme: fluid
+   ```  
+   theme: fluid  
    ```
 
 ### 修改主题配置
 
 主题配置指的是 hexo 所采用的 theme 所用配置，而并非对 Hexo blog 的配置
 
-> TIP[^1]
->
-> 致主题的新用户：
->
+> TIP[^1]  
+>  
+> 致主题的新用户：  
+>  
 > - 本指南经过数个版本打磨，  
->   绝大部分的功能都有详细说明，请仔细阅读，节约自己和他人的时间；
-> - 本指南中提到的："**站点配置**" 指的 Hexo 博客目录下的 `_config.yml`，"**主题配置**" 指的是 `theme/fluid/_config.yml` 或者 `_config.fluid.yml` ，注意区分；
-> - 本指南中提到的 `source` 目录都指的是博客目录下的 `source` 文件夹，不推荐修改主题内 `source` 目录；
-> - 每次无论 `hexo g` 或 `hexo s`，都最好先使用 `hexo clean` 清除本地缓存；
-> - 页面结果以本地 `hexo s` 为准，部署后的异常大部分是线上缓存原因，在确认没有报错的情况下，等待若干时间后即可正常；
+>   绝大部分的功能都有详细说明，请仔细阅读，节约自己和他人的时间；  
+> - 本指南中提到的："**站点配置**" 指的 Hexo 博客目录下的 `_config.yml`，"**主题配置**" 指的是 `theme/fluid/_config.yml` 或者 `_config.fluid.yml` ，注意区分；  
+> - 本指南中提到的 `source` 目录都指的是博客目录下的 `source` 文件夹，不推荐修改主题内 `source` 目录；  
+> - 每次无论 `hexo g` 或 `hexo s`，都最好先使用 `hexo clean` 清除本地缓存；  
+> - 页面结果以本地 `hexo s` 为准，部署后的异常大部分是线上缓存原因，在确认没有报错的情况下，等待若干时间后即可正常；  
 > - 由于主题的不同版本会存在配置差异，本指南以最新版本为准。
 
-这里按照官方文档所说去做就行，为什么这么配文档也有说，我这里是 Hexo 6.1.0。[^2]
-所以在Blog 根目录创建 `_config.fluid.yml`
-![](/imgs/Hexo主题变更/Fluid_Config.png)
-然后在该文件内，粘贴 Fluid 官方给定的配置[^3]就行，当然你可以根据他的自定义，
+这里按照官方文档所说去做就行，为什么这么配文档也有说，我这里是 Hexo 6.1.0。[^2]  
+所以在Blog 根目录创建 `_config.fluid.yml`  
+![](/imgs/Hexo主题变更/Fluid_Config.png)  
+然后在该文件内，粘贴 Fluid 官方给定的配置[^3]就行，当然你可以根据他的自定义，  
 但是我不会，因为我不会……
 
-#### code[^5]
+#### code，建议别从我这里复制，这个blog会崩溃，去官网吧[^5]
 
 ~~~yaml
 #---------------------------
@@ -1180,41 +1180,153 @@ static_prefix:
 
 ### 站点配置
 
-现在对我而言还有两个问题，我换到 Fluid 就是为了 Latex
-所以……
+现在对我而言还有两个问题，我换到 Fluid 就是为了 Latex  
+所以……  
 这里还是按官方来，[^4]
 
-**1.设置主题配置**
+1. **设置主题配置**  
+    $我这里使用的是\;mathjax+pandoc,\;$  
+    $好处是别人可以复制你写的\;Latex$  
+    $\begin{aligned}坏处是\hspace{340px}\\  
+    他的换行不能像 typora的'\backslash\backslash'直接换行,\hspace{115px}\\  
+    要使用\backslash begin\{aligned\}\backslash end\{aligned\}\hspace{100px}\\  
+    才能'\backslash\backslash'换行\hspace{300px}\\  
+    而且不能使用\backslash hfill只能使用\backslash hspace\{num\; cm/px\}\hspace{10px}  
+    \end{aligned}$  
+    而且换行前必须打两个空格  
 
-$我这里使用的是\;mathjax+pandoc,\;$  
-$好处是别人可以复制你写的\;Latex$  
-$\begin{aligned}坏处是\hspace{340px}\\
-他的换行不能像 typora的'\backslash\backslash'直接换行,\hspace{115px}\\
-要使用\backslash begin\{aligned\}\backslash end\{aligned\}\hspace{100px}\\
-才能'\backslash\backslash'换行\hspace{300px}\\
-而且不能使用\backslash hfill只能使用\backslash hspace\{num\; cm/px\}\hspace{10px}
-\end{aligned}$  
-而且换行前必须打两个空格
+    ~~~yaml
+    post:  
+      math:  
+       enable: true  
+       specific: false  
+    	  engine: mathjax  
+    ~~~
 
+    `specific`: 建议开启。当为 true 时，只有在文章 [front-matter (opens new window)](https://hexo.io/zh-cn/docs/front-matter)里指定 `math: true` 才会在文章页启动公式转换，以便在页面不包含公式时提高加载速度。
 
-```yaml
-post:
-  math:
-    enable: true
-    specific: false
-    engine: mathjax
-```
+    `engine`: 公式引擎，目前支持 `mathjax` 或 `katex`。
 
-`specific`: 建议开启。当为 true 时，只有在文章 [front-matter (opens new window)](https://hexo.io/zh-cn/docs/front-matter)里指定 `math: true` 才会在文章页启动公式转换，以便在页面不包含公式时提高加载速度。
+2. **更换 Markdown 渲染器**  
+    由于 Hexo 默认的 Markdown 渲染器不支持复杂公式，所以需要更换渲染器（mathjax 可选择性更换）。
+    然后根据上方配置不同的 `engine`，推荐更换如下渲染器：
+  
+    * mathjax
+      ~~~sh
+      npm uninstall hexo-renderer-marked --save
+      npm install hexo-renderer-pandoc --save
+      ~~~
+    
+      **并且还需[安装 Pandoc](https://github.com/jgm/pandoc/blob/master/INSTALL.md)**
+    
+    * katex
+	  ~~~sh
+	  npm uninstall hexo-renderer-marked --save
+	  npm install hexo-renderer-markdown-it --save
+	  npm install @traptitech/markdown-it-katex --save
+	  ~~~
+	  
+	  然后在站点配置中添加：
+      ~~~yaml
+      markdown:
+        plugins:
+          - "@traptitech/markdown-it-katex"
+	  ~~~
+### 我安装Pandoc过程
 
-`engine`: 公式引擎，目前支持 `mathjax` 或 `katex`。
+环境说明：Windows11
+
+1. [下载 Pandoc](https://github.com/jgm/pandoc/blob/master/INSTALL.md)  
+   下载链接[download page](https://github.com/jgm/pandoc/releases/latest)  
+   ![](/imgs/Hexo主题变更/pandoc1.png)找到 window，我使用的是 msi：  
+   ![](/imgs/Hexo主题变更/pandoc1-1.png)  
+2. 按照提示安装就可以，这里可以自选目录  
+   pandoc 和 hexo-renderer-pandoc不一样，一个是程序，一个是hexo的渲染插件
+
+### 插入图片
+
+我还是用的老办法，`![](/imgs/xxxx)`，  
+想要在 typora 也显示，那就把文档的图片放到一个文件夹`/imgs/`内  
+Fluid 会在`..\Blog\source`目录下寻找图片资源文件，其他类型应该也是一样。
 
 ## 待解决问题
 
 * 换行异常：  
   typora 可以换行，但是 web blog 不能换行只能换段  
-  latex 公式不能换行
+  latex 公式不能换行  
   * 因为pandoc和typora语法不一样
+  * 这里给出修改代码  
+    这里的代码有问题哦，但是我不改了……也都有注释，如果你需要可以自行修改  
+    编译原理的自动机学过伐，一样的
+    
+    ~~~python  
+    import os
+    
+    # 指定需要修改的 Markdown 文件夹路径  
+    folder_path = '/path/to/markdown_folder/'
+    
+    def process_md_file(file_path):  
+        with open(file_path, 'r', encoding='utf-8') as f:  
+            content = f.readlines()
+    
+        modified_content = []  
+        code_block = False  
+        latex_block = False  
+        setting_block = False  
+        for i in range(len(content)):  
+            line = content[i].rstrip('\n')
+    
+            # 判断是否进入或退出代码块  
+            if line.startswith('~~~'):  
+                code_block = not code_block
+    
+            # 判断是否进入或退出 LaTeX 段落  
+            if line.startswith('$$'):  
+                latex_block = not latex_block
+    
+            # 判断是否进入或退出设置段  
+            if line.startswith('---'):  
+                setting_block = not setting_block
+    
+            # 如果在代码块内、LaTeX 段落内或设置段内，则不做修改  
+            if code_block or latex_block or setting_block:  
+                modified_content.append(line)  
+            else:  
+                # 如果行首是标题，则不加空格  
+                if line.startswith('#'):  
+                    modified_content.append(line)  
+                # 如果行首以 <img 开头，则不做修改  
+                elif line.lstrip().startswith('<img'):  
+                    modified_content.append(line)  
+                # 如果行首以 < 开头，则不加空格（除了 <img 外）  
+                elif line.startswith('<'):  
+                    modified_content.append(line)  
+                else:  
+                    # 如果行尾已经有两个空格，则不做修改  
+                    if line.endswith('  '):  
+                        modified_content.append(line)  
+                    else:  
+                        # 判断下一行是否为空行  
+                        if i < len(content) - 1 and content[i+1].strip() == '':  
+                            modified_content.append(line)  
+                        else:  
+                            modified_content.append(line + '  ')
+    
+        with open(file_path, 'w', encoding='utf-8') as f:  
+            f.write('\n'.join(modified_content))
+    
+        print(f'已修改文件: {file_path}')
+    
+    # 遍历 Markdown 文件夹下的所有文件  
+    for root, dirs, files in os.walk(folder_path):  
+        for file in files:  
+            if file.endswith('.md'):  
+                file_path = os.path.join(root, file)  
+                process_md_file(file_path)
+    
+    print('所有文件修改完成')  
+    ~~~
+  
 
 标题段落间隔大 : 主题问题
 
@@ -1223,8 +1335,8 @@ post:
 [^0]:[图片搜索:saucenao](https://saucenao.com/)
 [^1]:[Hexo Fulid 官方Doc](https://hexo.fluid-dev.com/docs)
 [^2]:[配置指南 | Hexo Fluid 用户手册 (fluid-dev.com)](https://hexo.fluid-dev.com/docs/guide/#覆盖配置)
-[^3]:[主题配置](https://github.com/fluid-dev/hexo-theme-fluid/blob/master/_config.yml)
-[^4]:[配置指南 | Hexo Fluid 用户手册 (fluid-dev.com)](https://hexo.fluid-dev.com/docs/guide/#latex-数学公式)
+[^3]:[主题配置](https://github.com/fluid-dev/hexo-theme-fluid/blob/master/_config.yml)  
+[^4]:[配置指南 | Hexo Fluid 用户手册 (fluid-dev.com)](https://hexo.fluid-dev.com/docs/guide/#latex-数学公式)  
 [^5]:[hexo-theme-fluid/_config.yml at master · fluid-dev/hexo-theme-fluid (github.com)](https://github.com/fluid-dev/hexo-theme-fluid/blob/master/_config.yml)
 
 [MathJax 文档 — MathJax 3.2 文档](https://docs.mathjax.org/en/latest/index.html)
@@ -1233,4 +1345,4 @@ post:
 
 [hexojs/hexo-math: A hexo plugin that uses MathJax to render math equations. (github.com)](https://github.com/hexojs/hexo-math)
 
-[pandoc/INSTALL.md 在主 ·JGM/PANDOC的 (github.com)](https://github.com/jgm/pandoc/blob/main/INSTALL.md)
+[pandoc/INSTALL.md 在主 ·JGM/PANDOC的 (github.com)](https://github.com/jgm/pandoc/blob/main/INSTALL.md)  
