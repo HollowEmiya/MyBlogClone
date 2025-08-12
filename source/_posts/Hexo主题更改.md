@@ -4,11 +4,7 @@ tags: [Hexo,主题变更]
 math: true
 index_img: /imgs/Hexo主题变更/Shiki&Tsukihime.png
 banner_img: /imgs/Hexo主题变更/Shiki&Tsukihime.png
-<<<<<<< HEAD
 date: 2024-01-13
-=======
-data: 2024-01-13
->>>>>>> e8dca420d7048ad9484cd8252ef496504eab0a20
 typora-root-url: ../
 ---
 
