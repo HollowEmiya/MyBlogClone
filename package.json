@@ -9,10 +9,17 @@
     "server": "hexo server"
   },
   "hexo": {
+<<<<<<< HEAD
     "version": "6.3.0"
   },
   "dependencies": {
     "hexo": "^6.3.0",
+=======
+    "version": "6.1.0"
+  },
+  "dependencies": {
+    "hexo": "^6.0.0",
+>>>>>>> e8dca420d7048ad9484cd8252ef496504eab0a20
     "hexo-deployer-git": "^3.0.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",

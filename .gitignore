@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .DS_Store
 Thumbs.db
 db.json
@@ -5,4 +6,13 @@ db.json
 node_modules/
 public/
 .deploy*/
+=======
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+>>>>>>> e8dca420d7048ad9484cd8252ef496504eab0a20
 _multiconfig.yml
