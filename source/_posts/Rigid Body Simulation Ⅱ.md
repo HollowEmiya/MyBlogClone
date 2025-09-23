@@ -8,6 +8,9 @@ data: 2025--08--19 22:09:48
 typora-root-url: ./..
 ---
 
+刚体模拟 Ⅱ。  
+<!--more-->
+
 # Rigid Body Simulation Ⅱ
 
 ## Part Ⅱ. Nonpenetration Constraints

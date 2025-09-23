@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="400" viewBox="0 0 124 124" fill="none">
+<line x1="16" y1="60"
+  x2="112" y2="60" stroke="black" stroke-width="0.2"></line>
+<circle
+  cx="16"
+  cy="60"
+  r="1"
+  fill="#5DFF"
+  stroke="black"
+  stroke-width="0.2"
+/>
+<!--offset 32-->
+<circle
+  cx="48"
+  cy="60"
+  r="1"
+  fill="#5DFF"
+  stroke="black"
+  stroke-width="0.2"
+/>
+  
+<circle
+  cx="80"
+  cy="60"
+  r="1"
+  fill="#5DFF"
+  stroke="black"
+  stroke-width="0.2"
+/>
+  
+<circle
+  cx="112"
+  cy="60"
+  r="1"
+  fill="#5DFF"
+  stroke="black"
+  stroke-width="0.2"
+/>
+<text
+  x="112"
+  y="55"
+  font-family="Arial"
+  font-size="4"
+  fill="#07AF"
+  text-anchor="middle"
+>
+  函数采样
+</text>
+<rect
+  x="0"
+  y="44"        
+  width="32"     
+  height="32"           
+  fill="#0000"       
+  stroke="#FF9340FF"   
+  stroke-width="0.4"
+/>
+<rect
+  x="32"
+  y="44"        
+  width="32"     
+  height="32"           
+  fill="#0000"       
+  stroke="#FF9340FF"   
+  stroke-width="0.4"
+/>
+<rect
+  x="64"
+  y="44"        
+  width="32"     
+  height="32"           
+  fill="#0000"       
+  stroke="#FF9340FF"   
+  stroke-width="0.4"
+/>
+<rect
+  x="96"
+  y="44"        
+  width="32"     
+  height="32"           
+  fill="#0000"       
+  stroke="#FF9340FF"   
+  stroke-width="0.4"
+/>
+  
+<text
+  x="12"
+  y="82"
+  font-family="Arial"
+  font-size="4"
+  fill="#FF9340FF"
+  text-anchor="middle"
+>
+  纹理存储
+</text>
+</svg>

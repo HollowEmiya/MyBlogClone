@@ -1,5 +1,5 @@
 ---
-title: Rigid Body Simulation Ⅱ
+title: Rigid Body Simulation Ⅲ
 math: true
 tags: [Math]
 index_img: 
@@ -7,6 +7,9 @@ banner_img:
 data: 2025--09--04 22:09:48
 typora-root-url: ./..
 ---
+
+刚体模拟附录部分。  
+<!--more-->
 
 # Rigid Body Simulation Ⅲ
 
@@ -82,17 +85,14 @@ $$
 $$
 \begin{aligned}
 \sum m_i(\dot{v}-\dot{r}_i'^*\omega-r_i'^*\dot\omega)-F_i-F_{ci}&=\\
-
 \sum m_i\dot{v}-
 \sum m_i\dot{r}_i'^*\omega-
 \sum m_ir_i'^*\dot\omega -
 \sum F_i-\sum F_{ci} &=\\
-
 \sum m_i\dot{v}-
 (\sum m_i\dot{r}_i')^*\omega-
 (\sum m_ir_i')^*\dot\omega-
 \sum F_i-\sum F_{ci}&=\\
-
 \sum m_i\dot{v}-
 (\frac{\mathrm{d}}{\mathrm{d}t}\sum m_ir_i')^*\omega-
 (\sum m_ir_i')^*\dot\omega-

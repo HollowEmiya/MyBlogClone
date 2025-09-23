@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="700" fill="none">
+    <circle
+    cx="350" cy="350"
+    r="300"
+    stroke="black"
+    stroke-width="0.5"
+    />
+    <circle
+    cx="350" cy="350"
+    r="200"
+    stroke="black"
+    stroke-width="0.5"
+    />
+    <line x1="350" x2="350" y1="350" y2="100"
+    stroke="#000000" stroke-width="2"  />
+    <line x1="350" x2="350" y1="100" y2="20"
+    stroke="#000000" stroke-width="2"
+    stroke-dasharray="5,5"  />
+
+    <!-- offset 480,360(120,90) -->
+    <line x1="350" x2="950" y1="100" y2="550"
+    stroke="#000000" stroke-width="1"  />
+    <!-- offset 450,400 -->
+    <line x1="350" x2="890" y1="100" y2="580"
+    stroke="#000000" stroke-width="1"  />
+    <circle 
+    cx="350" cy="350"
+    r="5"
+    fill="#000000"
+    stroke="black"
+    stroke-width="0.2"
+    />
+    <circle 
+    cx="350" cy="100"
+    r="5"
+    fill="#477bff"
+    stroke="black"
+    stroke-width="0.2"
+    />
+    <!-- offset 120,90,ground -->
+    <circle 
+    cx="470" cy="190"
+    r="5"
+    fill="#794100"
+    stroke="black"
+    stroke-width="0.2"
+    />
+    
+    <text
+    x="330"
+    y="350"
+    font-family="Arial"
+    font-size="20"
+    fill="#000000"
+    text-anchor="middle">
+        O
+    </text>
+    
+    <text
+    x="330"
+    y="100"
+    font-family="Arial"
+    font-size="20"
+    fill="#000000"
+    text-anchor="middle">
+        P
+    </text>
+    <text
+    x="470"
+    y="180"
+    font-family="Arial"
+    font-size="20"
+    fill="#000000"
+    text-anchor="middle">
+        G
+    </text>
+    <!-- sun -->
+    <!-- 50/4=12.5,50,40,30 offset -30,+40 -->
+    <circle 
+    cx="800" cy="500"
+    r="5"
+    fill="#030200"
+    stroke="black"
+    stroke-width="0.2"
+    />
+    <circle
+    cx="800" cy="500"
+    r="50"
+    stroke="black"
+    stroke-width="0.5"
+    />
+    <circle 
+    cx="830" cy="460"
+    r="2"
+    fill="#794100"
+    stroke="black"
+    stroke-width="0.2"
+    />
+    <text
+    x="780"
+    y="520"
+    font-family="Arial"
+    font-size="20"
+    fill="#000000"
+    text-anchor="middle">
+        S
+    </text>
+
+    <!-- other -->
+    <circle
+    cx="1500" cy="350"
+    r="300"
+    stroke="black"
+    stroke-width="0.5"
+    />
+    
+    <circle
+    cx="1500" cy="350"
+    r="200"
+    stroke="black"
+    stroke-width="0.5"
+    />
+    <!-- 350 to 1500, offset 1150 -->
+    <line x1="1500" x2="1500" y1="350" y2="100"
+    stroke="#000000" stroke-width="2"  />
+    <line x1="1500" x2="1500" y1="100" y2="20"
+    stroke="#000000" stroke-width="2"
+    stroke-dasharray="5,5"  />
+
+    <!-- offset 480,360(120,90) -->
+    <line x1="1500" x2="2100" y1="100" y2="550"
+    stroke="#000000" stroke-width="1"  />
+    <!-- offset 510,320(102,64) -->
+    <line x1="1500" x2="2112" y1="100" y2="484"
+    stroke="#000000" stroke-width="1"  />
+    <circle 
+    cx="1500" cy="350"
+    r="5"
+    fill="#000000"
+    stroke="black"
+    stroke-width="0.2"
+    />
+    <circle 
+    cx="1500" cy="100"
+    r="5"
+    fill="#477bff"
+    stroke="black"
+    stroke-width="0.2"
+    />
+    <circle 
+    cx="1620" cy="190"
+    r="5"
+    fill="#794100"
+    stroke="black"
+    stroke-width="0.2"
+    />
+    <text
+    x="1480"
+    y="350"
+    font-family="Arial"
+    font-size="20"
+    fill="#000000"
+    text-anchor="middle">
+        O
+    </text>
+    
+    <text
+    x="1480"
+    y="100"
+    font-family="Arial"
+    font-size="20"
+    fill="#000000"
+    text-anchor="middle">
+        P
+    </text>
+    <text
+    x="1620"
+    y="220"
+    font-family="Arial"
+    font-size="20"
+    fill="#000000"
+    text-anchor="middle">
+        G
+    </text>
+
+    <!-- sun -->
+    <!-- 50/4=12.5,50,40,30 offset -30,+40 -->
+    <circle 
+    cx="2010" cy="420"
+    r="5"
+    fill="#030200"
+    stroke="black"
+    stroke-width="0.2"
+    />
+    <circle
+    cx="2010" cy="420"
+    r="50"
+    stroke="black"
+    stroke-width="0.5"
+    />
+    <circle 
+    cx="1980" cy="460"
+    r="2"
+    fill="#794100"
+    stroke="black"
+    stroke-width="0.2"
+    />
+    <text
+    x="2020"
+    y="410"
+    font-family="Arial"
+    font-size="20"
+    fill="#000000"
+    text-anchor="middle">
+        S
+    </text>
+</svg>

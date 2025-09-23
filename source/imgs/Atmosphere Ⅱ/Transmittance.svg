@@ -1,0 +1,42 @@
+<svg width="340px" height="195px" xmlns="http://www.w3.org/2000/svg">
+  <style type="text/css">
+    circle { fill: #000000; stroke: none; }
+    path { fill: none; stroke: #000000; }
+    text { 
+      font-size: 16px; 
+      font-style: normal; 
+      font-family: 'Arial', 'Segoe UI', sans-serif; 
+      /* font-family: Sans; */
+    }
+    .vector { font-weight: bold; }
+  </style>
+  <!-- 修改圆弧方向：large-arc-flag=0 (小圆弧), sweep-flag=0 (逆时针) -->
+  <path d="m 0,26 a 600,600 0 0 1 340,0"></path>
+  <path d="m 0,110 a 520,520 0 0 1 340,0"></path>
+  <path d="m 170,190 0,-30"></path>
+  <path d="m 170,140 0,-130"></path>
+  <path d="m 170,50 165,-33"></path>
+  <path d="m 155,150 10,-10 10,10 10,-10"></path>
+  <path d="m 155,160 10,-10 10,10 10,-10"></path>
+  <path d="m 95,50 30,0"></path>
+  <path d="m 95,190 30,0"></path>
+  <path d="m 105,50 0,140" style="stroke-dasharray:8,2;"></path>
+  <path d="m 100,55 5,-5 5,5"></path>
+  <path d="m 100,185 5,5 5,-5"></path>
+  <path d="m 170,25 a 25,25 0 0 1 25,20" style="stroke-dasharray:4,2;"></path>
+  <path d="m 170,190 70,0"></path>
+  <path d="m 235,185 5,5 -5,5"></path>
+  <path d="m 165,125 5,-5 5,5"></path>
+  <circle cx="170" cy="190" r="2.5"></circle>
+  <circle cx="170" cy="50" r="2.5"></circle>
+  <circle cx="320" cy="20" r="2.5"></circle>
+  <circle cx="270" cy="30" r="2.5"></circle>
+  <text x="155" y="45" class="vector">p</text>
+  <text x="265" y="45" class="vector">q</text>
+  <text x="320" y="15" class="vector">i</text>
+  <text x="175" y="185" class="vector">o</text>
+  <text x="90" y="125">r</text>
+  <text x="185" y="25">μ=cos(θ)</text>
+  <text x="240" y="185">x</text>
+  <text x="155" y="120">z</text>
+</svg>

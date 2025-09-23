@@ -1069,6 +1069,25 @@ $$
 如果有若干多个点，这样做，相当于一种投影，而投影点集前后，点集之间相对当前 W 分量的点集关系不会改变，比如两个点之前相聚(a,b,c)， 除2后就是 (a/2,b/2,c/2)  
 挺有意思但没啥用好像。
 
+#### 从屏幕空间和Depth 反算world Pos
+
+$$
+\begin{aligned}
+&M_{proj}M_{view}\cdot P_{ws}=P_{cs}\\
+&\frac{P_{cs}}{P_{cs}.w}=P_{ndc}\\
+&With\;P_{ndc}\;need\;P_{ws}\;but\;no\;P_{cs}.w\\
+&There\;is\\
+&P_{ws}=M_{view}^{-1}\Big(M_{proj}^{-1}(P_{ndc}*P_{cs}.w)\Big)\\
+&P_{ws}.w=\Big(M_{view}^{-1}M_{proj}^{-1}(P_{ndc}*P_{cs}.w)\Big).w=1\\
+&so\\
+&P_{cs}.w=\frac{1.0}{M_{view}^{-1}M_{proj}^{-1}P_{ndc}.w}\\
+&P_{ws}=\frac{M_{view}^{-1}M_{proj}^{-1}P_{ndc}}
+{(M_{view}^{-1}M_{proj}^{-1}P_{ndc}).w}
+\end{aligned}
+$$
+
+
+
 ## TBN 矩阵
 
 [TBN矩阵不错的Blog](https://zhuanlan.zhihu.com/p/412555049)

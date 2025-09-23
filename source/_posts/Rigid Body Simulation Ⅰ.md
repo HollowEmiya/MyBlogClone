@@ -8,6 +8,9 @@ data: 2025--08--12 22:09:48
 typora-root-url: ./..
 ---
 
+刚体模拟内容Ⅰ
+<!--more-->
+
 # Rigid Body Simulation Ⅰ
 
 ## Part I. Unconstrained Rigid Body Dynamics
@@ -142,29 +145,30 @@ r_{xz}
 $$
 对于其他轴向也有：
 $$
+\begin{aligned}
 \dot R=\begin{pmatrix}
-
 \omega(t)\times\begin{pmatrix}
 r_{xx}\\
 r_{xy}\\
 r_{xz}
-\end{pmatrix}
-\;\;
+\end{pmatrix},
 \omega(t)\times\begin{pmatrix}
 r_{yx}\\
 r_{yy}\\
 r_{yz}
-\end{pmatrix}
-\;\;
+\end{pmatrix},
 \omega(t)\times\begin{pmatrix}
 r_{zx}\\
 r_{zy}\\
 r_{zz}
 \end{pmatrix}
-
-\end{pmatrix}\tag{2-8}
+\end{pmatrix}
+\end{aligned}\tag{2-8}
 $$
-这样写很麻烦，我们可以简化，因 a，b 都是三维向量，则 $a\times b$ 亦是：  
+
+
+这样写很麻烦，我们可以简化，因 a，b 都是三维向量，则 $a\times b$ 亦是：
+
 $$
 a\times b=\begin{pmatrix}
 a_yb_z-b_ya_z\\
@@ -172,7 +176,7 @@ a_zb_x-b_za_x\\
 a_xb_y-b_xa_y
 \end{pmatrix}
 $$
-我们定义一个矩阵 $a^*$:   
+我们定义一个矩阵 $a^*$: 
 $$
 {
 a^*=\begin{pmatrix}
@@ -182,6 +186,7 @@ a^*=\begin{pmatrix}
 \end{pmatrix}
 }
 $$
+
 $$
 {
 a^*b=\begin{pmatrix}
@@ -191,6 +196,7 @@ a_xb_y-b_xa_y
 \end{pmatrix}=a\times b\tag{2-9}
 }
 $$
+
 $$
 \dot{R}(t)=
 \begin{pmatrix}
@@ -200,14 +206,12 @@ r_{xx}\\
 r_{xy}\\
 r_{xz}
 \end{pmatrix}
-
 &\omega(t)^*
 \begin{pmatrix}
 r_{yx}\\
 r_{yy}\\
 r_{yz}
 \end{pmatrix}
-
 &\omega(t)^*
 \begin{pmatrix}
 r_{zx}\\
@@ -221,20 +225,17 @@ $$
 \dot{R}(t)=
 \omega(t)^*
 \begin{pmatrix}
-
 \begin{pmatrix}
 r_{xx}\\
 r_{xy}\\
 r_{xz}
 \end{pmatrix}
-
 &
 \begin{pmatrix}
 r_{yx}\\
 r_{yy}\\
 r_{yz}
 \end{pmatrix}
-
 &
 \begin{pmatrix}
 r_{zx}\\
@@ -243,6 +244,7 @@ r_{zz}
 \end{pmatrix}
 \end{pmatrix}\tag{2-11}
 $$
+
 $$
 \dot{R}(t)=
 \omega(t)^*{R}(t)\tag{2-12}
@@ -402,7 +404,7 @@ $$
 在**实际实现**中，我们会将**有限求和**替换为对刚体体积的**积分**（在世界坐标系中进行）。质量项 $m_i$ 会被**密度函数**取代。
 
 乍看之下，似乎每当刚体的朝向 $R(t)$ 变化时，都需要重新计算积分来求解惯性张量 $I(t)$。除非刚体形状极其简单（例如球形或立方体，这类形状的积分可解析求解），否则在仿真过程中执行这种计算会**代价过高**。  
-幸运的是，通过使用物体坐标系，我们可以基于**预计算积分**（在体坐标系中完成），低成本地计算任意朝向 $R(t)$ 下的惯性张量。（该积分通常在仿真启动前完成，应被视为描述刚体物理属性的输入参数之一。）使用式子 $r_i^{'T}r_i^{'}=r_{ix}^{'2}+r_{iy}^{'2}+r_{iz}^{'2}$，可以重写  
+幸运的是，通过使用物体坐标系，我们可以基于**预计算积分**（在体坐标系中完成），低成本地计算任意朝向 $R(t)$ 下的惯性张量。（该积分通常在仿真启动前完成，应被视为描述刚体物理属性的输入参数之一。）使用式子 $r_i^{'T}r_i^{'}=r_{ix}^{'2}+r_{iy}^{'2}+r_{iz}^{'2}$，可以重写
 $$
 I(t)=\sum m_ir_i^{'T}r_i^{'}
 \begin{pmatrix}
@@ -414,11 +416,9 @@ I(t)=\sum m_ir_i^{'T}r_i^{'}
 m_ir_{ix}^{'2}
 & m_ir_{ix}^{'}r_{iy}^{'}
 & m_ir_{ix}^{'}r_{iz}^{'}\\
-
 m_ir_{iy}^{'}r_{ix}^{'}
 & m_ir_{iy}^{'2}
 & m_ir_{iy}^{'}r_{iz}^{'}\\
-
 m_ir_{iz}^{'}r_{ix}^{'}
 & m_ir_{iz}^{'}r_{iy}^{'}
 & m_ir_{iz}^{'2}
@@ -443,11 +443,9 @@ r_{iz}^{'}
 r_{ix}^{'2}
 & r_{ix}^{'}r_{iy}^{'}
 & r_{ix}^{'}r_{iz}^{'}\\
-
 r_{iy}^{'}r_{ix}^{'}
 & r_{iy}^{'2}
 & r_{iy}^{'}r_{iz}^{'}\\
-
 r_{iz}^{'}r_{ix}^{'}
 & r_{iz}^{'}r_{iy}^{'}
 & r_{iz}^{'2}
@@ -455,7 +453,7 @@ r_{iz}^{'}r_{ix}^{'}
 \end{aligned}\tag{2-34}
 $$
 
-设 $\textbf{1}$ 是一个 3x3 的单位矩阵：  
+设 $\textbf{1}$ 是一个 3x3 的单位矩阵：
 $$
 I(t)=\sum m_i(r_i^{'T}r_i^{'}\textbf{1}-r_i^{'}r_i^{'T})\tag{2-35}
 $$
@@ -472,7 +470,7 @@ I(t)&=
 &=\sum m_i(r_{0i}^Tr_{0i}\textbf{1}-R(t)r_{0i}r_{0i}^TR(t)^T)
 \end{aligned}\tag{2-36}
 $$
-由于 $r_{0i}^Tr_{0i}$ 是标量，所以可以有：  
+由于 $r_{0i}^Tr_{0i}$ 是标量，所以可以有：
 $$
 \begin{aligned}
 I(t)&=\sum m_i(r_{0i}^Tr_{0i}\textbf{1}-R(t)r_{0i}r_{0i}^TR(t)^T)\\
@@ -480,7 +478,7 @@ I(t)&=\sum m_i(r_{0i}^Tr_{0i}\textbf{1}-R(t)r_{0i}r_{0i}^TR(t)^T)\\
 &=R(t)\bigg(\sum m_i\Big((r_{0i}^Tr_{0i})\textbf{1}-r_{0i}r_{0i}^T)\Big)\bigg)R(t)^T
 \end{aligned}\tag{2-37}
 $$
-定义 $I_{body}$ 矩阵：  
+定义 $I_{body}$ 矩阵：
 $$
 I_{body}=\sum m_i((r_{0i}^Tr_{0i}\textbf{1}-r_{0i}r_{0i}^T))\tag{2-38}
 $$
@@ -503,7 +501,7 @@ $$
 
 #### 2.11  Rigid Body Equations of Motion
 
-对于一个刚体我们定义 $\textbf{Y}(t)$:  
+对于一个刚体我们定义 $\textbf{Y}(t)$:
 $$
 \textbf{Y}(t)=
 \begin{pmatrix}
@@ -514,7 +512,7 @@ L(t)
 \end{pmatrix}\tag{2-41}
 $$
 刚体的状态由**空间信息**（位置与朝向）和**速度信息**（线动量与角动量）共同构成。刚体的质量 $M$ 与**体坐标系惯性张量** $I_{body}$ 是常量——我们假设在仿真启动时，这两个物理属性已预先确定。  
-在任意给定时刻，辅助量 $I(t)$（世界坐标系惯性张量）、$\omega (t)$（角速度）与 $v(t)$（线速度）需通过计算得到:  
+在任意给定时刻，辅助量 $I(t)$（世界坐标系惯性张量）、$\omega (t)$（角速度）与 $v(t)$（线速度）需通过计算得到:
 $$
 \begin{aligned}
 & v(t)=\frac{P(t)}{M}\\
@@ -522,7 +520,7 @@ $$
 & \omega(t)=I(t)^{-1}L(t)
 \end{aligned}\tag{2-42}
 $$
-导数 $\frac{\mathrm{d}}{\mathrm{d}t}\textbf{Y}(t)$:  
+导数 $\frac{\mathrm{d}}{\mathrm{d}t}\textbf{Y}(t)$:
 $$
 \begin{aligned}
 \frac{\mathrm{d}}{\mathrm{d}t}\textbf{Y}(t)=
@@ -701,11 +699,9 @@ $$
 1-2v_y^2-2v_z^2
 & 2v_xv_y-2sv_z
 & 2v_xv_z+2sv_y\\
-
 2v_xv_y+2sv_z
 & 1-2v_x^2-2v_z^2
 & 2v_yv_z-2sv_x\\
-
 2v_xv_z-2sv_y
 & 2v_yv_z+2sv_x
 & 1-2v_x^2-2v_y^2
@@ -809,11 +805,9 @@ I_{body}=
 y_0^2+z_0^2
 & 0
 & 0\\
-
 0
 & x_0^2+z_0^2
 & 0\\
-
 0
 & 0
 & x_0^2+y_0^2
@@ -849,7 +843,6 @@ $$
 \begin{pmatrix}
 -3\\0\\-2
 \end{pmatrix}\times F\\
-
 &(x(t)+
 \begin{pmatrix}
 3\\0\\-2
@@ -857,7 +850,6 @@ $$
 \begin{pmatrix}
 3\\0\\-2
 \end{pmatrix}\times F\\
-
 &\tau=
 \begin{pmatrix}
 -3\\0\\-2
@@ -884,6 +876,7 @@ $$
 现在假设外力 $F_1=(0,0,f)$作用在物体的点 $x(t)+(-3,0, -2)$上，外力 $F_2=(0,0,-f)$ 作用在物体的点 $x(t)+(3,0,2)$上。由于F1 =−F2，作用在物体上的合力是 $F_1+F_2=0$​，所以没有质心加速度。  
 ![](/imgs/Rigid Body Simulation Ⅰ/Figure9.png)  另一方面，扭矩合是  
 $$
+\begin{aligned}
 &(x(t)+
 \begin{pmatrix}
 -3\\0\\-2
@@ -919,6 +912,7 @@ $$
 \begin{pmatrix}
 0\\6f\\0
 \end{pmatrix}
+\end{aligned}
 $$
 因此，合扭矩为$(0,6f,0)$，与y轴平行。最终的结果是，作用在物体上的力使物体沿 y轴 呈角加速。
 
