@@ -1,0 +1,20 @@
+<svg width="340px" height="150px"  xmlns="http://www.w3.org/2000/svg">
+  <style type="text/css">
+    circle { fill: #000000; stroke: none; }
+    path { fill: none; stroke: #000000; }
+    text { font-size: 16px; font-style: normal; font-family: Sans; }
+    .vector { font-weight: bold; }
+  </style>
+  <path d="m 0,26 a 600,600 0 0 1 340,0"></path>
+  <path d="m 0,110 a 520,520 0 0 1 340,0"></path>
+  <path d="m 170,140 0,-135"></path>
+  <path d="m 20,80 200,-40"></path>
+  <path d="m 209,39 11,1 -10,5"></path>
+  <circle cx="70" cy="70" r="2.5"></circle>
+  <circle cx="120" cy="60" r="2.5"></circle>
+  <circle cx="170" cy="50" r="2.5"></circle>
+  <text x="65" y="60" class="vector">p</text>
+  <text x="175" y="65" class="vector">q</text>
+  <text x="225" y="35" class="vector">ω</text>
+  <text x="115" y="50" class="vector">p<tspan style="font-weight:normal;">'</tspan></text>
+</svg>

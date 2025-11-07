@@ -1,0 +1,41 @@
+<svg height="190px" width="360px" xmlns="http://www.w3.org/2000/svg">
+  <style type="text/css">
+    circle { fill: #000000; stroke: none; }
+    path { fill: none; stroke: #000000; }
+    text { font-size: 16px; font-style: normal; font-family: Sans; }
+    /* text { 
+      font-size: 16px; 
+      font-style: normal; 
+      font-family: 'Arial', 'Segoe UI', sans-serif; 
+    } */
+    .vector { font-weight: bold; }
+  </style>
+  <path d="m 0,66 a 600,600 0 0 1 340,0"></path>
+  <path d="m 0,150 a 520,520 0 0 1 340,0"></path>
+  <path d="m 170,180 0,-165"></path>
+  <path d="m 250,180 30,-165"></path>
+  <path d="m 170,90 -30,-60"></path>
+  <path d="m 155,70 0,-10 8,6"></path>
+  <path d="m 270,70 -20,-40" style="stroke-width:2;"></path>
+  <path d="m 170,90 100,-20" style="stroke-width:2;"></path>
+  <path d="m 270,70 75,-15"></path>
+  <path d="m 170,65 a 25,25 0 0 1 25,20" style="stroke-dasharray:4,2;"></path>
+  <path d="m 170,30 a 60,60 1 0 0 -26.8,6.3" style="stroke-dasharray:4,2;"></path>
+  <path d="m 255,40 a 35,35 0 0 1 21,-3.2" style="stroke-dasharray:4,2;"></path>
+  <path d="m 258,45 a 30,30 0 0 1 41,19" style="stroke-dasharray:4,2;"></path>
+  <circle cx="170" cy="90" r="2.5"></circle>
+  <circle cx="270" cy="70" r="2.5"></circle>
+  <circle cx="319.2" cy="60" r="2.5"></circle>
+  <text x="155" y="105" class="vector">p</text>
+  <text x="275" y="85" class="vector">q</text>
+  <text x="130" y="70" class="vector">ω<tspan dy="2" style="font-size:10px;font-weight:normal;">s</tspan></text>
+  <text x="155" y="164">r</text>
+  <text x="265" y="165">r<tspan dy="2" style="font-size:10px">d</tspan></text>
+  <text x="220" y="95">d</text>
+  <text x="190" y="65">μ</text>
+  <text x="145" y="25">μ<tspan dy="2" style="font-size:10px">s</tspan></text>
+  <text x="290" y="45">ν</text>
+  <text x="319" y="80">i</text>
+  <text x="330" y="50">ω<tspan dx="-11" dy="-8" style="font-size:10px">→</tspan></text>
+  <text x="250" y="20">μ<tspan dy="2" style="font-size:10px">s,d</tspan></text>
+</svg>
