@@ -20,3 +20,8 @@ typora-root-url: ../
 为什么**遮挡查询**，要2x2的像素。
 首先我们的做法是把包围盒投影到屏幕空间采样对应等级的Mipmap，那这个投影过程可能就会有精度缺失。
 如果之采样1个像素就会降低命中率，尤其是我们找寻最高LOD层级才能大概率找到对应的 1x1 像素，这命中率是不高的。
+
+## Reference
+
+[大世界GPU Driven地形入门 - 知乎](https://zhuanlan.zhihu.com/p/388844386)  
+[GPU Driven Terrain-Github Project](https://github.com/wlgys8/GPUDrivenTerrainLearn)
