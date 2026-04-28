@@ -1003,6 +1003,11 @@ real PerceptualRoughnessToMipmapLevel(real perceptualRoughness, uint maxMipLevel
 
 SAMPLE_TEXTURECUBE_LOD(unity_SpecCube0, samplerunity_SpecCube0, reflectVector, mip);
 
+## 有的Split Sum LUT有第三通道
+
+应该是多级散射的一项，具体可以看：  
+[Image Based Lighting with Multiple Scattering | Bruno Opsenica's Blog](https://bruop.github.io/ibl/)
+
 ## **参考**
 
 [由浅入深学习PBR的原理和实现 - 0向往0 - 博客园 (cnblogs.com)](https://www.cnblogs.com/timlly/p/10631718.html)   
