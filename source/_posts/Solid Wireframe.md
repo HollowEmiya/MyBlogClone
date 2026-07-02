@@ -1,3 +1,17 @@
+---
+title: Solid Wireframe
+math: true
+tags: [Render]
+index_img: 
+banner_img: 
+data: 2025--05--31 19:09:23
+typora-root-url: ./..
+---
+
+方模型显示线框。
+
+<!--more-->
+
  # Solid Wireframe
 
 ~~~glsl
